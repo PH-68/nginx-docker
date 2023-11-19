@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  nginx:
+    container_name: nginx
+    image: nginx:alpine-slim
+    ports:
+     - "443:443"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d:rw
+      - /home/azureuser/acme.sh/:/cert:r
