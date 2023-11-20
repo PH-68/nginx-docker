@@ -10,3 +10,4 @@ services:
     volumes:
       - ./conf.d:/etc/nginx/conf.d:rw
       - /home/azureuser/acme.sh/:/cert:r
+    restart: always
